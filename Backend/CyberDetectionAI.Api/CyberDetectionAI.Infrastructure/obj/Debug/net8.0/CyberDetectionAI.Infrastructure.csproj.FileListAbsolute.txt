@@ -1,0 +1,17 @@
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\bin\Debug\net8.0\CyberDetectionAI.Infrastructure.deps.json
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\bin\Debug\net8.0\CyberDetectionAI.Infrastructure.dll
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\bin\Debug\net8.0\CyberDetectionAI.Infrastructure.pdb
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\bin\Debug\net8.0\CyberDetectionAI.Application.dll
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\bin\Debug\net8.0\CyberDetectionAI.Domain.dll
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\bin\Debug\net8.0\CyberDetectionAI.Application.pdb
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\bin\Debug\net8.0\CyberDetectionAI.Domain.pdb
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\obj\Debug\net8.0\CyberDetectionAI.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\obj\Debug\net8.0\CyberDetectionAI.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\obj\Debug\net8.0\CyberDetectionAI.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\obj\Debug\net8.0\CyberDetectionAI.Infrastructure.AssemblyInfo.cs
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\obj\Debug\net8.0\CyberDetectionAI.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\obj\Debug\net8.0\CyberDet.EA52E31A.Up2Date
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\obj\Debug\net8.0\CyberDetectionAI.Infrastructure.dll
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\obj\Debug\net8.0\refint\CyberDetectionAI.Infrastructure.dll
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\obj\Debug\net8.0\CyberDetectionAI.Infrastructure.pdb
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Infrastructure\obj\Debug\net8.0\ref\CyberDetectionAI.Infrastructure.dll

@@ -1,0 +1,15 @@
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\bin\Debug\net8.0\CyberDetectionAI.Application.deps.json
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\bin\Debug\net8.0\CyberDetectionAI.Application.dll
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\bin\Debug\net8.0\CyberDetectionAI.Application.pdb
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\bin\Debug\net8.0\CyberDetectionAI.Domain.dll
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\bin\Debug\net8.0\CyberDetectionAI.Domain.pdb
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\obj\Debug\net8.0\CyberDetectionAI.Application.csproj.AssemblyReference.cache
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\obj\Debug\net8.0\CyberDetectionAI.Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\obj\Debug\net8.0\CyberDetectionAI.Application.AssemblyInfoInputs.cache
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\obj\Debug\net8.0\CyberDetectionAI.Application.AssemblyInfo.cs
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\obj\Debug\net8.0\CyberDetectionAI.Application.csproj.CoreCompileInputs.cache
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\obj\Debug\net8.0\CyberDet.09710F59.Up2Date
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\obj\Debug\net8.0\CyberDetectionAI.Application.dll
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\obj\Debug\net8.0\refint\CyberDetectionAI.Application.dll
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\obj\Debug\net8.0\CyberDetectionAI.Application.pdb
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Application\obj\Debug\net8.0\ref\CyberDetectionAI.Application.dll

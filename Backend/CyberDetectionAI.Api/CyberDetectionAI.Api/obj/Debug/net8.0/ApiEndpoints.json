@@ -1,0 +1,54 @@
+[
+  {
+    "ContainingType": "CyberDetectionAI.Api.Controllers.ThreatController",
+    "Method": "GetAuditLogs",
+    "RelativePath": "api/threat/auditlogs",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CyberDetectionAI.Api.Controllers.ThreatController",
+    "Method": "AnalyzeEmail",
+    "RelativePath": "api/threat/email",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CyberDetectionAI.Application.DTOs.EmailScanRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CyberDetectionAI.Api.Controllers.ThreatController",
+    "Method": "GetHistory",
+    "RelativePath": "api/threat/history",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "CyberDetectionAI.Api.Controllers.ThreatController",
+    "Method": "AnalyzeUrl",
+    "RelativePath": "api/threat/url",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "request",
+        "Type": "CyberDetectionAI.Application.DTOs.UrlScanRequest",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]

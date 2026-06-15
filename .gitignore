@@ -1,0 +1,8 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/.vs/CyberDetectionAI/v17
+/Backend/.vs
+/Backend/CyberDetectionAI.Api/.vs/CyberDetectionAI.Api
+/Backend/CyberDetectionAI.Api/CyberDetectionAI.OutlookConnector/.vs/CyberDetectionAI.OutlookConnector

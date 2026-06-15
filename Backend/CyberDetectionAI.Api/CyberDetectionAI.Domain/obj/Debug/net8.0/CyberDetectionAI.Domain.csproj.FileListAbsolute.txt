@@ -1,0 +1,11 @@
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Domain\bin\Debug\net8.0\CyberDetectionAI.Domain.deps.json
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Domain\bin\Debug\net8.0\CyberDetectionAI.Domain.dll
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Domain\bin\Debug\net8.0\CyberDetectionAI.Domain.pdb
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Domain\obj\Debug\net8.0\CyberDetectionAI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Domain\obj\Debug\net8.0\CyberDetectionAI.Domain.AssemblyInfoInputs.cache
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Domain\obj\Debug\net8.0\CyberDetectionAI.Domain.AssemblyInfo.cs
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Domain\obj\Debug\net8.0\CyberDetectionAI.Domain.csproj.CoreCompileInputs.cache
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Domain\obj\Debug\net8.0\CyberDetectionAI.Domain.dll
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Domain\obj\Debug\net8.0\refint\CyberDetectionAI.Domain.dll
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Domain\obj\Debug\net8.0\CyberDetectionAI.Domain.pdb
+C:\Users\Anusha Yadav\source\repos\CyberDetectionAI\Backend\CyberDetectionAI.Api\CyberDetectionAI.Domain\obj\Debug\net8.0\ref\CyberDetectionAI.Domain.dll

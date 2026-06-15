@@ -1,0 +1,333 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Api\\CyberDetectionAI.Api.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Api\\CyberDetectionAI.Api.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Api\\CyberDetectionAI.Api.csproj",
+        "projectName": "CyberDetectionAI.Api",
+        "projectPath": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Api\\CyberDetectionAI.Api.csproj",
+        "packagesPath": "C:\\Users\\Anusha Yadav\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Api\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Anusha Yadav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Application\\CyberDetectionAI.Application.csproj": {
+                "projectPath": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Application\\CyberDetectionAI.Application.csproj"
+              },
+              "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Infrastructure\\CyberDetectionAI.Infrastructure.csproj": {
+                "projectPath": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Infrastructure\\CyberDetectionAI.Infrastructure.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "Microsoft.Graph": {
+              "target": "Package",
+              "version": "[6.1.0, )"
+            },
+            "Swashbuckle.AspNetCore": {
+              "target": "Package",
+              "version": "[6.4.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.AspNetCore.App": {
+              "privateAssets": "none"
+            },
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Application\\CyberDetectionAI.Application.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Application\\CyberDetectionAI.Application.csproj",
+        "projectName": "CyberDetectionAI.Application",
+        "projectPath": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Application\\CyberDetectionAI.Application.csproj",
+        "packagesPath": "C:\\Users\\Anusha Yadav\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Application\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Anusha Yadav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Domain\\CyberDetectionAI.Domain.csproj": {
+                "projectPath": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Domain\\CyberDetectionAI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Domain\\CyberDetectionAI.Domain.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Domain\\CyberDetectionAI.Domain.csproj",
+        "projectName": "CyberDetectionAI.Domain",
+        "projectPath": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Domain\\CyberDetectionAI.Domain.csproj",
+        "packagesPath": "C:\\Users\\Anusha Yadav\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Domain\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Anusha Yadav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Infrastructure\\CyberDetectionAI.Infrastructure.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Infrastructure\\CyberDetectionAI.Infrastructure.csproj",
+        "projectName": "CyberDetectionAI.Infrastructure",
+        "projectPath": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Infrastructure\\CyberDetectionAI.Infrastructure.csproj",
+        "packagesPath": "C:\\Users\\Anusha Yadav\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Infrastructure\\obj\\",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
+        "configFilePaths": [
+          "C:\\Users\\Anusha Yadav\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net8.0"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net8.0": {
+            "targetAlias": "net8.0",
+            "projectReferences": {
+              "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Application\\CyberDetectionAI.Application.csproj": {
+                "projectPath": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Application\\CyberDetectionAI.Application.csproj"
+              },
+              "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Domain\\CyberDetectionAI.Domain.csproj": {
+                "projectPath": "C:\\Users\\Anusha Yadav\\source\\repos\\CyberDetectionAI\\Backend\\CyberDetectionAI.Api\\CyberDetectionAI.Domain\\CyberDetectionAI.Domain.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net8.0": {
+          "targetAlias": "net8.0",
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "Microsoft.EntityFrameworkCore.Relational": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[8.0.18, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
