@@ -9,6 +9,10 @@ using System.Linq;
 using System.Text;
 using System.Text.Json;
 using System.Threading.Tasks;
+using HtmlAgilityPack;
+using System.Xml;
+
+
 
 namespace CyberDetectionAI.Infrastructure.Services
 {
@@ -26,22 +30,25 @@ namespace CyberDetectionAI.Infrastructure.Services
             _embeddingService = embeddingService;
         }
 
+        public static string ExtractText(string html)
+        {
+            var doc = new HtmlDocument();
+            doc.LoadHtml(html);
+
+            return HtmlEntity.DeEntitize(doc.DocumentNode.InnerText);
+        }
+
         public async Task<List<ThreatSimilarityResult>>FindSimilarThreatsAsync(string content)
         {
-            var inputEmbedding = await _embeddingService.GenerateEmbeddingAsync(content);
+            var extractedText = ExtractText(content);
+            var inputEmbedding = await _embeddingService.GenerateEmbeddingAsync(extractedText);
             var threats = await _context.ThreatKnowledgeBase.ToListAsync();
             var results = new List<ThreatSimilarityResult>();
 
             foreach (var threat in threats)
             {
-                var storedEmbedding =
-                    JsonSerializer.Deserialize<float[]>(
-                        threat.Embedding);
-
-                double similarity =
-                    _embeddingService.CosineSimilarity(
-                        inputEmbedding,
-                        storedEmbedding!);
+                var storedEmbedding = JsonSerializer.Deserialize<float[]>(threat.Embedding);
+                double similarity = _embeddingService.CosineSimilarity(inputEmbedding, storedEmbedding!);
 
                 if (similarity > 0.75)
                 {
@@ -64,23 +71,16 @@ namespace CyberDetectionAI.Infrastructure.Services
                                          string status, int riskScore)
         {
             var embedding = await _embeddingService.GenerateEmbeddingAsync(content);
+            var text = ExtractText(content);
 
             var entity = new ThreatKnowledge
                             {
                                 Id = Guid.NewGuid(),
-
-                                Content = content,
-
+                                Content = text,
                                 ThreatType = threatType,
-
                                 Status = status,
-
                                 RiskScore = riskScore,
-
-                                Embedding =
-                                    JsonSerializer.Serialize(
-                                        embedding),
-
+                                Embedding = JsonSerializer.Serialize(embedding),
                                 CreatedOn = DateTime.UtcNow
                             };
 

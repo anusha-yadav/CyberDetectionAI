@@ -26,8 +26,7 @@ namespace CyberDetectionAI.Api.Controllers
                 UrlScanRequest request)
         {
             return Ok(
-                await _service
-                    .AnalyzeUrlAsync(request.Url));
+                await _service.AnalyzeUrlAsync(request.Url));
         }
 
         [HttpPost("email")]
@@ -35,10 +34,7 @@ namespace CyberDetectionAI.Api.Controllers
             AnalyzeEmail(
                 EmailScanRequest request)
         {
-            return Ok(
-                await _service
-                    .AnalyzeEmailAsync(
-                        request.Body));
+            return Ok(await _service.AnalyzeEmailAsync(request.Body));
         }
 
         [HttpGet("history")]

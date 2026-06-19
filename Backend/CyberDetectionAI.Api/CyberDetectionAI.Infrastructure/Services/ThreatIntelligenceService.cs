@@ -25,13 +25,11 @@ namespace CyberDetectionAI.Infrastructure.Services
             _configuration = configuration;
         }
 
-        public async Task<ThreatIntelResult>
-            AnalyzeDomainAsync(string domain)
+        public async Task<ThreatIntelResult>AnalyzeDomainAsync(string domain)
         {
             var result = new ThreatIntelResult();
 
-            var apiKey =
-                _configuration["VirusTotal:ApiKey"];
+            var apiKey = _configuration["VirusTotal:ApiKey"];
 
             var urlId =
                 Convert.ToBase64String(

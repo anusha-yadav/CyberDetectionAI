@@ -149,9 +149,6 @@ Console.WriteLine($"Subject: {message.Subject}");
                 {
                     Subject =
                         $"[⚠ Suspicious] {message.Subject}",
-
-                    IsRead = true,
-
                     Body = new ItemBody
                     {
                         ContentType =

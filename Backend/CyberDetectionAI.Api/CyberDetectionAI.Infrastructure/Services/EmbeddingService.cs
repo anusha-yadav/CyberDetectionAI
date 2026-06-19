@@ -28,7 +28,6 @@ namespace CyberDetectionAI.Infrastructure.Services
 
         public async Task<float[]>GenerateEmbeddingAsync(string text)
         {
-            text = RemoveHtml(text);
             var request = new
             {
                 model = "nomic-embed-text",

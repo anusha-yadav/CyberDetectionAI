@@ -11,7 +11,6 @@ namespace CyberDetectionAI.Application.Interfaces
     public interface IThreatAnalysisService
     {
         Task<ThreatAnalysisResponse> AnalyzeUrlAsync(string url);
-
         Task<ThreatAnalysisResponse> AnalyzeEmailAsync(string email);
         ThreatFeatures ExtractUrlFeatures(string url);
     }

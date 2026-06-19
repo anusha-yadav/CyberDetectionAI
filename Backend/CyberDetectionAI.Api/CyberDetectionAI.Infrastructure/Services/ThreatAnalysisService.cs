@@ -7,9 +7,13 @@ using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Http;
+using System.Net.Http.Json;
 using System.Text;
+using System.Text.Json;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
+using Whois.NET;
 
 namespace CyberDetectionAI.Infrastructure.Services
 {
@@ -18,13 +22,64 @@ namespace CyberDetectionAI.Infrastructure.Services
         private readonly ApplicationDbContext _context;
         private readonly IThreatIntelligenceService _threatIntelService;
         private readonly IThreatSimilarityService _threatSimilarityService;
+        private readonly HttpClient _httpClient;
+
         public ThreatAnalysisService(ApplicationDbContext context, 
                                      IThreatIntelligenceService threatIntelService,
-                                     IThreatSimilarityService threatSimilarityService)
+                                     IThreatSimilarityService threatSimilarityService,
+                                     HttpClient httpClient)
         {
             _context = context;
             _threatIntelService = threatIntelService;
             _threatSimilarityService = threatSimilarityService;
+            _httpClient = httpClient;
+        }
+
+
+        public async Task<int> AnalyzeDomainAsync(string domain)
+        {
+            int risk = 0;
+            var response = await WhoisClient.QueryAsync(domain);
+            if (response == null)
+            {
+                return risk;
+            }
+            var raw =
+                response.Raw ?? "";
+            var match =
+                Regex.Match(
+                    raw,
+                    @"Creation Date:\s*(.+)");
+
+            if (raw.Contains("No match for domain",StringComparison.OrdinalIgnoreCase))
+            {
+                risk += 50;
+            }
+
+            if (match.Success)
+            {
+                var createdText =
+                    match.Groups[1].Value.Trim();
+
+                if (DateTime.TryParse(
+                    createdText,
+                    out var createdDate))
+                {
+                    var age =
+                        DateTime.UtcNow -
+                        createdDate;
+
+                    if (age.TotalDays < 30)
+                    {
+                        risk += 40;
+                    }
+                    else if (age.TotalDays < 90)
+                    {
+                        risk += 25;
+                    }
+                }
+            }
+            return risk;
         }
 
         public async Task<ThreatAnalysisResponse> AnalyzeUrlAsync(string url)
@@ -32,6 +87,7 @@ namespace CyberDetectionAI.Infrastructure.Services
             var reasons = new List<string>();
             int score = 0;
             var features = ExtractUrlFeatures(url);
+            score += await AnalyzeDomainAsync(features.Domain);
             var intel = await _threatIntelService.AnalyzeDomainAsync(features.Domain);
             if (features.ContainsLoginKeyword)
             {
@@ -155,24 +211,17 @@ namespace CyberDetectionAI.Infrastructure.Services
             };
         }
 
-        public async Task<ThreatAnalysisResponse>
-            AnalyzeEmailAsync(string email)
+        public async Task<ThreatAnalysisResponse>AnalyzeEmailAsync(string email)
         {
             var urls = ExtractUrls(email);
             var reasons = new List<string>();
             int score = 0;
-
             var similarThreats = await _threatSimilarityService.FindSimilarThreatsAsync(email);
-
             foreach (var url in urls)
             {
-                var urlResult =
-                    await AnalyzeUrlAsync(url);
-
+                var urlResult = await AnalyzeUrlAsync(url);
                 score += urlResult.RiskScore;
-
-                reasons.AddRange(
-                    urlResult.Reasons);
+                reasons.AddRange(urlResult.Reasons);
             }
 
             if (email.Contains("urgent",
@@ -247,12 +296,14 @@ namespace CyberDetectionAI.Infrastructure.Services
             await _threatSimilarityService.AddThreatAsync(email,"Communication Threat",status,score);
 
             await _context.SaveChangesAsync();
+            var aiExplanation = await GenerateExplanationAsync(score, reasons, email);
 
             return new ThreatAnalysisResponse
             {
                 RiskScore = score,
                 Status = status,
-                Reasons = reasons
+                Reasons = reasons,
+                AiExplanation = aiExplanation
             };
         }
 
@@ -302,6 +353,89 @@ namespace CyberDetectionAI.Infrastructure.Services
             return features;
         }
 
+
+
+        public async Task<string> GenerateExplanationAsync(
+    int riskScore,
+    List<string> reasons,
+    string emailContent)
+        {
+            try
+            {
+                // Reduce prompt size for faster inference
+                var trimmedEmail =
+                    string.IsNullOrWhiteSpace(emailContent)
+                        ? string.Empty
+                        : emailContent.Length > 800
+                            ? emailContent[..800]
+                            : emailContent;
+
+                var prompt = $"""
+        You are a cybersecurity assistant.
+
+        Risk Score: {riskScore}
+
+        Reasons:
+        {string.Join(", ", reasons)}
+
+        Email:
+        {trimmedEmail}
+
+        Respond in EXACTLY 1 short sentence.
+        Maximum 25 words.
+        Mention:
+        - why suspicious
+        - possible risk
+        - simple caution
+        """;
+
+                var request = new
+                {
+                    // Faster model
+                    model = "phi3",
+
+                    prompt,
+
+                    stream = false,
+
+                    // Keep model loaded in memory
+                    keep_alive = "30m",
+
+                    options = new
+                    {
+                        // Smaller output = faster response
+                        num_predict = 40,
+
+                        // More deterministic
+                        temperature = 0.1,
+
+                        top_p = 0.9
+                    }
+                };
+
+                var response = await _httpClient.PostAsJsonAsync(
+                    "http://localhost:11434/api/generate",
+                    request);
+
+                response.EnsureSuccessStatusCode();
+
+                JsonElement result =
+                    await response.Content.ReadFromJsonAsync<JsonElement>();
+
+                var aiResponse =
+                    result.GetProperty("response").GetString();
+
+                return string.IsNullOrWhiteSpace(aiResponse)
+                    ? "Suspicious email detected; avoid clicking links or sharing personal information."
+                    : aiResponse.Trim();
+            }
+            catch
+            {
+                return "Suspicious email detected; verify the sender before opening links or attachments.";
+            }
+        }
+
+
         private double CalculateEntropy(string text)
         {
             var map = new Dictionary<char, int>();
@@ -333,13 +467,40 @@ namespace CyberDetectionAI.Infrastructure.Services
         public List<string> ExtractUrls(string content)
         {
             var matches = Regex.Matches(
-                content,
-                @"https?:\/\/[^\s]+");
+            content,
+            @"https?://[^\s""'<>]+");
 
-            return matches
-                .Select(x => x.Value)
-                .Distinct()
-                .ToList();
-        }
+return matches
+    .Select(x => CleanUrl(x.Value))
+    .Where(x => !string.IsNullOrWhiteSpace(x))
+    .Distinct()
+    .ToList();
+
+}
+
+        private string CleanUrl(string url)
+        {
+            if (string.IsNullOrWhiteSpace(url))
+            {
+                return string.Empty;
+            }
+
+
+// REMOVE COMMON TRAILING CHARS
+url = url.Trim(
+    '.', ',', ';', ':',
+    ')', ']', '>', '"', '\'');
+
+            // REMOVE EMOJIS / NON ASCII
+            url = Regex.Replace(
+                url,
+                @"[^\u0000-\u007F]+",
+                "");
+
+            return url.Trim();
+
+
+}
+
     }
 }
